@@ -1,8 +1,5 @@
 <?xml version="1.0" ?>
 <robot name="so_arm100">
-  <!-- Position mode -->
-  <!-- Max hardware velocity in steps/s -->
-  <!-- N⋅m (30 kgf⋅cm for STS3215) -->
   <material name="3d_printed">
     <color rgba="1.0 0.82 0.12 1.0"/>
   </material>

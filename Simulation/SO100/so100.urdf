@@ -172,7 +172,14 @@
       <material name="3d_printed"/>
     </visual>
   </link>
+  <!-- Base footprint (empty root link) -->
+  <link name="base_footprint"/>
   <!-- JOINTS -->
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
   <joint name="shoulder_pan" type="revolute">
     <parent link="base"/>
     <child link="shoulder"/>

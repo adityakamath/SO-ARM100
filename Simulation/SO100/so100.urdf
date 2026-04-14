@@ -7,6 +7,8 @@
     <color rgba="0.1 0.1 0.1 1.0"/>
   </material>
   <!-- LINKS -->
+  <!-- World (empty root link) -->
+  <link name="world"/>
   <!-- Base link -->
   <link name="base">
     <inertial>
@@ -67,22 +69,25 @@
   <link name="upper_arm">
     <inertial>
       <mass value="0.162409"/>
-      <origin rpy="0 0 0" xyz="-1.72052e-05 0.0701802 0.00310545"/>
-      <inertia ixx="0.000213312" ixy="0" ixz="0" iyy="0.000167164" iyz="0" izz="7.01522e-05"/>
+      <origin rpy="0 0 0" xyz="-0.00310545 0.0701802 -1.72052e-05"/>
+      <inertia ixx="7.01522e-05" ixy="0" ixz="0" iyy="0.000167164" iyz="0" izz="0.000213312"/>
     </inertial>
     <visual>
+      <origin rpy="0 -1.5707963268 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="assets/Upper_Arm.stl"/>
       </geometry>
       <material name="3d_printed"/>
     </visual>
     <visual>
+      <origin rpy="0 -1.5707963268 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="assets/Upper_Arm_Motor.stl"/>
       </geometry>
       <material name="sts3215"/>
     </visual>
     <collision>
+      <origin rpy="0 -1.5707963268 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="assets/Upper_Arm.stl"/>
       </geometry>
@@ -92,22 +97,25 @@
   <link name="lower_arm">
     <inertial>
       <mass value="0.147968"/>
-      <origin rpy="0 0 0" xyz="-0.00339604 0.00137796 0.0768007"/>
-      <inertia ixx="0.000138803" ixy="0" ixz="0" iyy="0.000107748" iyz="0" izz="4.84242e-05"/>
+      <origin rpy="0 0 0" xyz="-0.0768007 0.00137796 -0.00339604"/>
+      <inertia ixx="4.84242e-05" ixy="0" ixz="0" iyy="0.000107748" iyz="0" izz="0.000138803"/>
     </inertial>
     <visual>
+      <origin rpy="0 -1.5707963268 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="assets/Lower_Arm.stl"/>
       </geometry>
       <material name="3d_printed"/>
     </visual>
     <visual>
+      <origin rpy="0 -1.5707963268 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="assets/Lower_Arm_Motor.stl"/>
       </geometry>
       <material name="sts3215"/>
     </visual>
     <collision>
+      <origin rpy="0 -1.5707963268 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="assets/Lower_Arm.stl"/>
       </geometry>
@@ -117,22 +125,25 @@
   <link name="wrist">
     <inertial>
       <mass value="0.0661321"/>
-      <origin rpy="0 0 0" xyz="-0.00852653 -0.0352279 -2.34622e-05"/>
-      <inertia ixx="3.45403e-05" ixy="0" ixz="0" iyy="2.39041e-05" iyz="0" izz="1.94704e-05"/>
+      <origin rpy="0 0 0" xyz="2.34622e-05 -0.0352279 -0.00852653"/>
+      <inertia ixx="1.94704e-05" ixy="0" ixz="0" iyy="2.39041e-05" iyz="0" izz="3.45403e-05"/>
     </inertial>
     <visual>
+      <origin rpy="0 -1.5707963268 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="assets/Wrist_Pitch_Roll.stl"/>
       </geometry>
       <material name="3d_printed"/>
     </visual>
     <visual>
+      <origin rpy="0 -1.5707963268 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="assets/Wrist_Pitch_Roll_Motor.stl"/>
       </geometry>
       <material name="sts3215"/>
     </visual>
     <collision>
+      <origin rpy="0 -1.5707963268 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="assets/Wrist_Pitch_Roll.stl"/>
       </geometry>
@@ -142,16 +153,18 @@
   <link name="gripper">
     <inertial>
       <mass value="0.0929859"/>
-      <origin rpy="0 0 0" xyz="0.00552377 -0.0280167 0.000483583"/>
-      <inertia ixx="5.03136e-05" ixy="0" ixz="0" iyy="4.64098e-05" iyz="0" izz="2.72961e-05"/>
+      <origin rpy="0 0 0" xyz="0.00552377 -0.000483583 -0.0280167"/>
+      <inertia ixx="5.03136e-05" ixy="0" ixz="0" iyy="2.72961e-05" iyz="0" izz="4.64098e-05"/>
     </inertial>
     <visual>
+      <origin rpy="1.5707963268 0 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="assets/Fixed_Jaw.stl"/>
       </geometry>
       <material name="3d_printed"/>
     </visual>
     <visual>
+      <origin rpy="1.5707963268 0 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="assets/Fixed_Jaw_Motor.stl"/>
       </geometry>
@@ -172,8 +185,6 @@
       <material name="3d_printed"/>
     </visual>
   </link>
-  <!-- World (empty root link) -->
-  <link name="world"/>
   <!-- JOINTS -->
   <joint name="world_joint" type="fixed">
     <parent link="world"/>

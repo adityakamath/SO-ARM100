@@ -201,35 +201,35 @@
   <joint name="shoulder_lift" type="revolute">
     <parent link="shoulder"/>
     <child link="upper_arm"/>
-    <origin rpy="-0.2292036732051035 0 1.5707963267948966" xyz="0.0306 0 0.1025"/>
-    <axis xyz="1 0 0"/>
+    <origin rpy="-1.5707963268 1.3415926536 0" xyz="0.0306 0 0.1025"/>
+    <axis xyz="0 0 1"/>
     <limit effort="2.942" lower="0" upper="3.5" velocity="5.21553467881118"/>
   </joint>
   <joint name="elbow_flex" type="revolute">
     <parent link="upper_arm"/>
     <child link="lower_arm"/>
-    <origin rpy="1.5707963267948966 0 0" xyz="0 0.11257 0.028"/>
-    <axis xyz="1 0 0"/>
+    <origin rpy="0 0 1.5707963268" xyz="-0.028 0.11257 0"/>
+    <axis xyz="0 0 1"/>
     <limit effort="2.942" lower="-3.14158" upper="0" velocity="5.21553467881118"/>
   </joint>
   <joint name="wrist_flex" type="revolute">
     <parent link="lower_arm"/>
     <child link="wrist"/>
-    <origin rpy="-1 0 0" xyz="0 0.0052 0.1349"/>
-    <axis xyz="1 0 0"/>
+    <origin rpy="0 0 -1" xyz="-0.1349 0.0052 0"/>
+    <axis xyz="0 0 1"/>
     <limit effort="2.942" lower="-2.5" upper="1.2" velocity="5.21553467881118"/>
   </joint>
   <joint name="wrist_roll" type="revolute">
     <parent link="wrist"/>
     <child link="gripper"/>
-    <origin rpy="0 1.5707963267948966 0" xyz="0 -0.0601 0"/>
-    <axis xyz="0 1 0"/>
+    <origin rpy="-1.5707963268 0 0" xyz="0 -0.0601 0"/>
+    <axis xyz="0 0 1"/>
     <limit effort="2.942" lower="-3.14158" upper="3.14158" velocity="5.21553467881118"/>
   </joint>
   <joint name="gripper" type="revolute">
     <parent link="gripper"/>
     <child link="jaw"/>
-    <origin rpy="0 3.141592653589793 0" xyz="-0.0202 -0.0244 0"/>
+    <origin rpy="1.5707963268 0 3.1415926536" xyz="-0.0202 0 -0.0244"/>
     <axis xyz="0 0 1"/>
     <limit effort="2.942" lower="-0.2" upper="2.0" velocity="5.21553467881118"/>
   </joint>

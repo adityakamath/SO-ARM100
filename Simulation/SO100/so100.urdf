@@ -172,11 +172,11 @@
       <material name="3d_printed"/>
     </visual>
   </link>
-  <!-- Base footprint (empty root link) -->
-  <link name="base_footprint"/>
+  <!-- World (empty root link) -->
+  <link name="world"/>
   <!-- JOINTS -->
-  <joint name="base_footprint_joint" type="fixed">
-    <parent link="base_footprint"/>
+  <joint name="world_joint" type="fixed">
+    <parent link="world"/>
     <child link="base"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
   </joint>

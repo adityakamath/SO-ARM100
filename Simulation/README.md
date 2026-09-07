@@ -21,17 +21,11 @@ rerun Simulation/SO100/so100.urdf
 ```bash
 rerun Simulation/SO101/so101_new_calib.urdf
 rerun Simulation/SO101/so101_old_calib.urdf
-```
-
-- A **wrist camera** variant is also provided, adding a wrist camera mount and camera body (Hex-Nut, 32x32 UVC module form factor) as fixed links off the gripper.
-
-```bash
-rerun Simulation/SO101/so101_new_calib_camera.urdf
+rerun Simulation/SO101/so101_new_calib_camera.urdf  # new calib + wrist camera mount
 ```
 
 - For more details on:
-  - The differences between the **old** and **new calibration** URDFs.
-  - The **wrist camera** URDF/MJCF variant.
+  - The differences between the **old**, **new**, and **wrist camera** calibration URDFs.
   - How the **MJCF** file was generated from the CAD model.
 
 👉 See the file [`Simulation/SO101/README.md`](SO101/README.md).

@@ -17,6 +17,12 @@ The MuJoCo file `scene.xml` supports two differenly calibrated SO101 robot files
 
 To switch between calibration methods, modify the included robot file in `scene.xml`.
 
+## Wrist Camera Variant
+
+- `so101_new_calib_camera.urdf` / `so101_new_calib_camera.xml` extend the new-calibration model with a **wrist camera mount and camera** (Hex-Nut, 32×32 UVC module form factor), matching the Wrist-Mount Camera hardware option in the main README's [Optional Hardware](../../README.md#optional-hardware) section.
+- Two fixed links are added off the gripper: `wrist_camera_mount_link` (mount, `assets/wrist_camera_mount_so101_v1.stl`) and `wrist_camera_link` (camera body, `assets/wrist_camera_so101_v1.stl`).
+- Use these files instead of the base `so101_new_calib` files when simulating a robot built with the wrist camera mount installed.
+
 ## Motor Parameters
 
 Motor properties for the STS3215 motors used in the robot are adapted from the [Open Duck Mini project](https://github.com/apirrone/Open_Duck_Mini).
